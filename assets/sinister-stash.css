@@ -24,6 +24,25 @@
   --media-radius: 0px;
 }
 
+/* Force dark background on entire page */
+body,
+.color-scheme-1 {
+  background-color: #141e24 !important;
+  color: #eef4f0 !important;
+}
+
+/* Catch any section without a color scheme */
+.shopify-section:not([class*="color-"]) {
+  background-color: #141e24;
+  color: #eef4f0;
+}
+
+/* Main content area */
+main#MainContent {
+  background-color: #141e24;
+  color: #eef4f0;
+}
+
 /* Utility class for accent font */
 .font-accent {
   font-family: var(--font-accent-family);
