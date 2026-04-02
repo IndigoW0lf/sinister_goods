@@ -610,6 +610,44 @@ cart-remove-button a:hover {
   margin-top: 24px;
 }
 
+/* FAQ page — question spacing */
+.faq-page .why-section {
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.faq-page .why-section:last-of-type {
+  border-bottom: none;
+}
+
+.faq-page .why-heading {
+  color: #F0645A;
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+/* In-page links for FAQ and shipping */
+.why-page a:not(.sg-hero__why-link) {
+  color: #F0645A;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.why-page a:not(.sg-hero__why-link):hover {
+  text-decoration: underline;
+}
+
+.why-page em {
+  font-style: italic;
+  color: #B8A0E8;
+}
+
+.why-page strong {
+  font-weight: 700;
+  color: #eef4f0;
+}
+
 /* Dawn page template overrides for /why */
 .sg-why-section .page-width {
   max-width: none;
