@@ -130,9 +130,12 @@ a:not(.button):hover {
   color: rgb(var(--color-ice-white));
 }
 
-/* Push header logo left */
-.header__heading {
-  margin-right: auto;
+/* Force header dark background */
+.section-header,
+.header-wrapper,
+.header {
+  background-color: #141e24 !important;
+  color: #eef4f0 !important;
 }
 
 .header__heading-logo {
