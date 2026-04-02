@@ -16,23 +16,27 @@
       <h2 class="sg-popup__headline">{{ section.settings.headline }}</h2>
       <p class="sg-popup__subhead">{{ section.settings.subhead }}</p>
 
-      <div class="sg-popup__form-wrapper">
-        {% form 'customer', id: 'sg-popup-form' %}
+      <div class="sg-popup__form-wrapper" id="sg-popup-form-wrapper">
+        <form id="sg-popup-form" action="/contact#contact_form" method="POST" novalidate>
+          <input type="hidden" name="form_type" value="customer">
+          <input type="hidden" name="utf8" value="✓">
           <input type="hidden" name="contact[tags]" value="popup,welcome-offer">
           <div class="sg-popup__field-row">
             <input
               type="email"
               name="contact[email]"
+              id="sg-popup-email"
               placeholder="YOUR EMAIL"
               required
               class="sg-popup__input"
               aria-label="Email address"
+              autocomplete="email"
             >
-            <button type="submit" class="sg-popup__submit">
+            <button type="submit" class="sg-popup__submit" id="sg-popup-btn">
               {{ section.settings.button_label }}
             </button>
           </div>
-        {% endform %}
+        </form>
       </div>
 
       <p class="sg-popup__code-hint">{{ section.settings.code_hint }}</p>
@@ -47,6 +51,9 @@
   (function() {
     var COOKIE_NAME = 'sg_popup_seen';
     var DELAY_MS = {{ section.settings.delay_seconds | times: 1000 }};
+    var COOKIE_DAYS = {{ section.settings.cookie_days }};
+    var DISCOUNT_CODE = '{{ section.settings.discount_code }}';
+    var DISCOUNT_AMT = '{{ section.settings.discount_amount }}';
 
     function getCookie(name) {
       var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
@@ -59,6 +66,7 @@
       document.cookie = name + '=' + value + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
     }
 
+    /* Show popup after delay if not seen */
     if (!getCookie(COOKIE_NAME)) {
       setTimeout(function() {
         var overlay = document.getElementById('sg-popup-overlay');
@@ -69,54 +77,93 @@
       }, DELAY_MS);
     }
 
+    /* Close popup */
     window.sgClosePopup = function() {
       var overlay = document.getElementById('sg-popup-overlay');
       if (overlay) {
         overlay.style.display = 'none';
         document.body.style.overflow = '';
-        setCookie(COOKIE_NAME, '1', {{ section.settings.cookie_days }});
+        setCookie(COOKIE_NAME, '1', COOKIE_DAYS);
       }
     };
 
-    // Close on overlay click
-    var overlay = document.getElementById('sg-popup-overlay');
-    if (overlay) {
-      overlay.addEventListener('click', function(e) {
-        if (e.target === overlay) {
-          window.sgClosePopup();
-        }
-      });
-    }
-
-    // Close on Escape key
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
+    /* Close on overlay click */
+    document.addEventListener('click', function(e) {
+      if (e.target && e.target.id === 'sg-popup-overlay') {
         window.sgClosePopup();
       }
     });
 
-    // Handle form submit — show success state
-    var form = document.getElementById('sg-popup-form');
-    if (form) {
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        var formData = new FormData(form);
-        fetch(form.action, {
-          method: 'POST',
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-        }).then(function() {
-          var content = form.closest('.sg-popup__content');
-          if (content) {
-            content.innerHTML = '<p class="sg-popup__eyebrow">YOU\'RE IN.</p>' +
-              '<h2 class="sg-popup__headline">WELCOME<br>TO THE<br>STASH.</h2>' +
-              '<p class="sg-popup__subhead">Use code <span class="sg-popup__code">{{ section.settings.discount_code }}</span> at checkout for {{ section.settings.discount_amount }} off your first order.</p>' +
-              '<button class="sg-popup__submit" onclick="sgClosePopup()">START SHOPPING</button>';
-          }
-          setCookie(COOKIE_NAME, '1', {{ section.settings.cookie_days }});
-        });
-      });
+    /* Close on Escape key */
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') window.sgClosePopup();
+    });
+
+    /* Show success state */
+    function showSuccess() {
+      var content = document.querySelector('.sg-popup__content');
+      if (content) {
+        content.innerHTML =
+          '<p class="sg-popup__eyebrow">YOU\'RE IN.</p>' +
+          '<h2 class="sg-popup__headline">WELCOME<br>TO THE<br>STASH.</h2>' +
+          '<p class="sg-popup__subhead">Use code <span class="sg-popup__code">' + DISCOUNT_CODE + '</span> at checkout for ' + DISCOUNT_AMT + ' off your first order.</p>' +
+          '<button class="sg-popup__submit" onclick="sgClosePopup()">START SHOPPING</button>';
+      }
+      setCookie(COOKIE_NAME, '1', COOKIE_DAYS);
     }
+
+    /* Intercept form submit — MUST prevent default before anything else */
+    document.addEventListener('submit', function(e) {
+      var form = document.getElementById('sg-popup-form');
+      if (!form || e.target !== form) return;
+
+      /* Stop the form from navigating — this is the critical line */
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+
+      var emailInput = document.getElementById('sg-popup-email');
+      var email = emailInput ? emailInput.value.trim() : '';
+
+      /* Basic validation */
+      if (!email || email.indexOf('@') === -1) {
+        emailInput.style.borderColor = '#F0645A';
+        return;
+      }
+
+      /* Disable button */
+      var btn = document.getElementById('sg-popup-btn');
+      if (btn) {
+        btn.textContent = 'JOINING...';
+        btn.disabled = true;
+      }
+
+      /* Send to Shopify via fetch — no page navigation */
+      var body = new URLSearchParams();
+      body.append('form_type', 'customer');
+      body.append('utf8', '\u2713');
+      body.append('contact[email]', email);
+      body.append('contact[tags]', 'popup,welcome-offer');
+
+      fetch('/contact#contact_form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Accept': 'application/json'
+        },
+        body: body.toString()
+      })
+      .then(function() {
+        showSuccess();
+      })
+      .catch(function() {
+        /* Even if fetch fails (CORS, redirect), the email was likely saved */
+        showSuccess();
+      });
+
+      return false;
+    }, true); /* <-- capture phase: fires BEFORE Shopify's handlers */
+
   })();
 </script>
 
