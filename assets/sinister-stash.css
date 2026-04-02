@@ -524,6 +524,39 @@ cart-remove-button a:hover {
 }
 
 /* ============================================
+   PREDICTIVE SEARCH / SEARCH RESULTS
+   ============================================ */
+
+predictive-search .predictive-search__result-group .predictive-search__heading,
+predictive-search .predictive-search__item a,
+predictive-search .predictive-search__item-heading,
+.predictive-search .predictive-search__item a,
+.search__results a,
+.search-modal__content a {
+  font-family: var(--font-body-family) !important;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+predictive-search .predictive-search__item-heading,
+.predictive-search .predictive-search__item-heading {
+  font-family: var(--font-body-family) !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+predictive-search .predictive-search__heading,
+.predictive-search .predictive-search__heading {
+  font-family: var(--font-body-family) !important;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8a9aa4;
+}
+
+/* ============================================
    SECTION SPACING
    ============================================ */
 
