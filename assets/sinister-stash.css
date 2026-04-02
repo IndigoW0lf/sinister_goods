@@ -498,3 +498,144 @@ cart-remove-button a:hover {
 .card--standard {
   box-shadow: none;
 }
+
+/* ============================================
+   /WHY PAGE
+   ============================================ */
+
+.why-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 24px 120px;
+  color: #eef4f0;
+  font-family: var(--font-body-family), 'Space Grotesk', sans-serif;
+}
+
+.why-eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  color: #F0645A;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.why-title {
+  font-family: var(--font-heading-family), 'PS Tier Condensed', sans-serif;
+  font-size: 72px;
+  line-height: 1.0;
+  color: #eef4f0;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .why-title { font-size: 42px; }
+}
+
+.why-divider {
+  width: 80px;
+  height: 2px;
+  background: #F0645A;
+  margin: 40px 0;
+}
+
+.why-section {
+  margin-bottom: 64px;
+}
+
+.why-section p {
+  font-size: 20px;
+  line-height: 1.7;
+  color: #eef4f0;
+  margin-bottom: 20px;
+}
+
+.why-heading {
+  font-family: var(--font-heading-family), 'PS Tier Condensed', sans-serif;
+  font-size: 36px;
+  color: #eef4f0;
+  margin-bottom: 24px;
+  line-height: 1.1;
+}
+
+.why-emphasis {
+  font-size: 22px !important;
+  font-weight: 700;
+  color: #F0645A !important;
+}
+
+.why-resource-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+}
+
+.why-resource-list li {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #eef4f0;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.why-resource-list li:last-child {
+  border-bottom: none;
+}
+
+.why-resource-list a {
+  color: #F0645A;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.why-resource-list a:hover {
+  text-decoration: underline;
+}
+
+.why-closing {
+  margin-top: 80px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.why-closing p {
+  font-size: 22px;
+  line-height: 1.7;
+  color: #eef4f0;
+  margin-bottom: 12px;
+}
+
+.why-sig {
+  color: #4AD4A8 !important;
+  font-size: 16px !important;
+  margin-top: 24px;
+}
+
+/* Dawn page template overrides for /why */
+.sg-why-section .page-width {
+  max-width: none;
+  padding: 0;
+}
+
+/* Hide Dawn breadcrumbs on why page */
+.sg-why-section ~ .breadcrumbs,
+body .sg-why-section .breadcrumbs__list {
+  display: none;
+}
+
+/* ─── Hero why link ──────────────────────────────────── */
+
+.sg-hero__why-link {
+  display: inline-block;
+  margin-top: 24px;
+  font-family: var(--font-body-family), 'Space Grotesk', sans-serif;
+  font-size: 13px;
+  color: rgba(238, 244, 240, 0.5);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: color 0.2s ease;
+}
+
+.sg-hero__why-link:hover {
+  color: #eef4f0;
+  text-decoration: none;
+}
