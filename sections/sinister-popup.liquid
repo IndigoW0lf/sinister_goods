@@ -118,7 +118,8 @@
         content.innerHTML =
           '<p class="sg-popup__eyebrow">YOU\'RE IN.</p>' +
           '<h2 class="sg-popup__headline">WELCOME TO<br>THE STASH.</h2>' +
-          '<p class="sg-popup__subhead">Use code <span class="sg-popup__code" onclick="sgCopyCode(this)" title="Click to copy">' + DISCOUNT_CODE + '</span> at checkout for ' + DISCOUNT_AMT + ' off your first order.</p>' +
+          '<p class="sg-popup__subhead sg-popup__subhead--tight">Use code at checkout for ' + DISCOUNT_AMT + ' off your first order.</p>' +
+          '<div class="sg-popup__code" onclick="sgCopyCode(this)" title="Click to copy">' + DISCOUNT_CODE + '</div>' +
           '<button class="sg-popup__submit" onclick="sgClosePopup()">START SHOPPING</button>';
       }
       setCookie(COOKIE_NAME, '1', COOKIE_DAYS);
