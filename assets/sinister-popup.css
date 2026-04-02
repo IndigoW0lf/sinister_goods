@@ -182,6 +182,30 @@
   margin: 0.8rem 1.2rem 1.6rem;
 }
 
+.sg-popup__code:hover {
+  cursor: pointer;
+  background-color: #B8A0E8;
+  color: #141e24;
+  border-color: #B8A0E8;
+  transition: all 0.2s;
+}
+
+.sg-popup__code:hover::after {
+  content: 'CLICK TO COPY';
+  display: block;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  margin-top: 0.4rem;
+  color: #141e24;
+  opacity: 0.7;
+}
+
+.sg-popup__code[data-copied="true"] {
+  background-color: #4AD4A8;
+  color: #141e24;
+  border-color: #4AD4A8;
+}
+
 /* Code hint */
 .sg-popup__code-hint {
   font-family: var(--font-body-family), 'Space Grotesk', sans-serif;
