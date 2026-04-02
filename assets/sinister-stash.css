@@ -24,6 +24,23 @@
   --media-radius: 0px;
 }
 
+/* GLOBAL DARK BACKGROUND — override everything Shopify tries */
+body,
+body .color-scheme-1,
+body .color-scheme-2,
+body [class*="color-scheme-"],
+main#MainContent,
+main#MainContent > .shopify-section,
+main#MainContent [class*="color-scheme-"],
+.shopify-section,
+.section-template--*,
+.collection-list,
+.product-grid-container,
+.page-width {
+  background-color: #141e24 !important;
+  color: #eef4f0 !important;
+}
+
 /* Utility class for accent font */
 .font-accent {
   font-family: var(--font-accent-family);
