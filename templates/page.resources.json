@@ -1,0 +1,472 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "sinister-resources",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "eyebrow": "SINISTER STASH",
+        "title": "Resources",
+        "intro": "The mark is personal. The movement is collective. These organizations are building the culture we believe in — inclusive, informed, and unafraid. Bookmark the ones that speak to you.",
+        "cta_text": "Know an organization we should include? We're always listening.",
+        "cta_button_label": "GET IN TOUCH",
+        "cta_link": "/pages/contact"
+      },
+      "blocks": {
+        "cat_lgbtq": {
+          "type": "category",
+          "settings": {
+            "heading": "LGBTQ+ Gun Clubs & Communities",
+            "description": "Spaces built for the rest of us."
+          }
+        },
+        "res_pink_pistols": {
+          "type": "resource",
+          "settings": {
+            "name": "Pink Pistols",
+            "description": "LGBTQ+ gun rights organization with 45+ chapters nationwide. \"Pick on someone your own caliber.\"",
+            "url": "https://www.pinkpistols.org/"
+          }
+        },
+        "res_blazing_sword": {
+          "type": "resource",
+          "settings": {
+            "name": "Operation Blazing Sword",
+            "description": "Volunteer network providing free firearm training to LGBTQ+ people. 1,500+ instructors across all 50 states. Born after the Pulse shooting.",
+            "url": "https://www.blazingsword.org/"
+          }
+        },
+        "res_armed_equality": {
+          "type": "resource",
+          "settings": {
+            "name": "Armed Equality",
+            "description": "LGBTQ+-focused firearms, self-defense, survival, and medical training. Because the right to self-defense is for everyone.",
+            "url": "https://www.armedequality.com/"
+          }
+        },
+        "res_equality_in_arms": {
+          "type": "resource",
+          "settings": {
+            "name": "Equality In Arms",
+            "description": "Orlando's only LGBTQ+ & minority-owned firearms training company. Zero tolerance for microaggressions — all the vibes.",
+            "url": "https://www.equalityinarms.com/"
+          }
+        },
+        "res_trigger_warning": {
+          "type": "resource",
+          "settings": {
+            "name": "Trigger Warning Queer & Trans Gun Club",
+            "description": "Queer and trans-centered gun club. The name is a deliberate reclamation. Chapters in multiple cities.",
+            "url": "https://www.facebook.com/triggerwarninggunclub/"
+          }
+        },
+
+        "cat_bipoc": {
+          "type": "category",
+          "settings": {
+            "heading": "BIPOC Gun Organizations",
+            "description": "The Second Amendment was written for everyone. These orgs are making sure it works that way."
+          }
+        },
+        "res_naaga": {
+          "type": "resource",
+          "settings": {
+            "name": "NAAGA",
+            "description": "National African American Gun Association. 75+ chapters, 45,000+ members. The largest and most established safe space for Black gun owners.",
+            "url": "https://naaga.co/"
+          }
+        },
+        "res_bgm": {
+          "type": "resource",
+          "settings": {
+            "name": "Black Guns Matter",
+            "description": "Firearms education and training in urban communities. Founded by Maj Toure. Segal Street to the range.",
+            "url": "https://officialblackgunsmatter.com/"
+          }
+        },
+        "res_hpn": {
+          "type": "resource",
+          "settings": {
+            "name": "Huey P. Newton Gun Club",
+            "description": "Named after the Black Panther co-founder. Community defense and education rooted in the tradition of armed self-determination.",
+            "url": "https://hueypnewtongunclub.org/"
+          }
+        },
+        "res_lra": {
+          "type": "resource",
+          "settings": {
+            "name": "Latino Rifle Association",
+            "description": "Progressive, anti-oppression gun org for Latino gun owners and allies. Built from the ground up at UC Berkeley.",
+            "url": "https://latinorifleassociation.org/"
+          }
+        },
+        "res_hara": {
+          "type": "resource",
+          "settings": {
+            "name": "Hispanic American Rifle Association",
+            "description": "Embracing and educating Hispanic Americans on self-defense and Second Amendment rights.",
+            "url": "https://hararifle.org/"
+          }
+        },
+
+        "cat_progressive": {
+          "type": "category",
+          "settings": {
+            "heading": "Left-Leaning & Progressive Gun Orgs",
+            "description": "You can own guns and still believe in healthcare. These aren't contradictions."
+          }
+        },
+        "res_sra": {
+          "type": "resource",
+          "settings": {
+            "name": "Socialist Rifle Association",
+            "description": "Pro-gun leftist organization with 50+ chapters and 10,000+ members. Community defense, not culture war.",
+            "url": "https://socialistra.org/"
+          }
+        },
+        "res_lgc": {
+          "type": "resource",
+          "settings": {
+            "name": "Liberal Gun Club",
+            "description": "4,500+ members across 30 state chapters. A pro-2A voice for left-of-center gun owners. Proof the Second Amendment doesn't belong to one party.",
+            "url": "https://theliberalgunclub.com/"
+          }
+        },
+        "res_abw2a": {
+          "type": "resource",
+          "settings": {
+            "name": "A Better Way 2A",
+            "description": "Inclusive 2A apparel and advocacy. Proceeds support nonprofits. Gun culture the way it should be — for everyone across the political spectrum.",
+            "url": "https://www.abetterway2a.com/"
+          }
+        },
+        "res_jbgc": {
+          "type": "resource",
+          "settings": {
+            "name": "John Brown Gun Club",
+            "description": "Anti-fascist, anti-racist community defense. Named after the abolitionist. Decentralized chapters nationwide.",
+            "url": "https://psjbgc.org/"
+          }
+        },
+        "res_la_progressive": {
+          "type": "resource",
+          "settings": {
+            "name": "L.A. Progressive Shooters",
+            "description": "Non-intimidating, inclusive community for people new to firearms. Featured in CNN, Time, LA Times. Helping people scared of guns shoot since 2020.",
+            "url": "https://laprogressiveshooters.com/"
+          }
+        },
+
+        "cat_community": {
+          "type": "category",
+          "settings": {
+            "heading": "Community & Culture",
+            "description": "The brands, creators, and communities reshaping what gun culture looks like."
+          }
+        },
+        "res_ayf": {
+          "type": "resource",
+          "settings": {
+            "name": "Arm Your Friends",
+            "description": "Houston-based training collective and brand. Education, community, and merch for people usually left out of the firearms conversation.",
+            "url": "https://armyourfriends.com/"
+          }
+        },
+        "res_reddit_lgo": {
+          "type": "resource",
+          "settings": {
+            "name": "r/liberalgunowners",
+            "description": "200,000+ members. The internet's largest community for non-conservative gun owners. No gatekeeping, real conversation.",
+            "url": "https://www.reddit.com/r/liberalgunowners/"
+          }
+        },
+        "res_reddit_sra": {
+          "type": "resource",
+          "settings": {
+            "name": "r/SocialistRA",
+            "description": "The SRA's Reddit home. Community defense discussions, range reports, and mutual aid — no fash allowed.",
+            "url": "https://www.reddit.com/r/SocialistRA/"
+          }
+        },
+        "res_reddit_2alib": {
+          "type": "resource",
+          "settings": {
+            "name": "r/2ALiberals",
+            "description": "Pro-gun, pro-liberty, left-of-center. Less moderation, more conversation. A different flavor of the same fight.",
+            "url": "https://www.reddit.com/r/2ALiberals/"
+          }
+        },
+
+        "cat_women": {
+          "type": "category",
+          "settings": {
+            "heading": "Women's Shooting Organizations",
+            "description": "Ranges have been boys' clubs long enough."
+          }
+        },
+        "res_agag": {
+          "type": "resource",
+          "settings": {
+            "name": "A Girl & A Gun Women's Shooting League",
+            "description": "Ladies-only shooting league with hundreds of chapters. Monthly events, training, and a community that shows up for each other.",
+            "url": "https://www.agirlandagun.org/"
+          }
+        },
+        "res_awa": {
+          "type": "resource",
+          "settings": {
+            "name": "Armed Women of America",
+            "description": "Formerly The Well Armed Woman. Nationwide shooting chapters for women — monthly meetups, training, and gear reviews actually sized for women.",
+            "url": "https://armedwomen.org/"
+          }
+        },
+
+        "cat_training": {
+          "type": "category",
+          "settings": {
+            "heading": "Gun Safety & Training",
+            "description": "Owning is a responsibility. These orgs help you carry it well."
+          }
+        },
+        "res_uscca": {
+          "type": "resource",
+          "settings": {
+            "name": "USCCA",
+            "description": "Training, education, and self-defense insurance for concealed carry holders. 850,000+ members. Massive resource library.",
+            "url": "https://www.usconcealedcarry.com/"
+          }
+        },
+        "res_pcs": {
+          "type": "resource",
+          "settings": {
+            "name": "Project ChildSafe",
+            "description": "The largest firearm safety education program in the U.S. 41+ million free safety kits distributed through law enforcement.",
+            "url": "https://projectchildsafe.org/"
+          }
+        },
+        "res_besmart": {
+          "type": "resource",
+          "settings": {
+            "name": "Be SMART Campaign",
+            "description": "Secure, Model, Ask, Recognize, Tell — a framework for keeping kids safe around firearms. Backed by Everytown.",
+            "url": "https://besmartforkids.org/"
+          }
+        },
+        "res_goro": {
+          "type": "resource",
+          "settings": {
+            "name": "Gun Owners for Responsible Ownership",
+            "description": "Gun owners partnering with public health professionals on safe storage education and free gun lock distribution.",
+            "url": "https://responsibleownership.org/"
+          }
+        },
+        "res_afsp": {
+          "type": "resource",
+          "settings": {
+            "name": "American Foundation for Suicide Prevention",
+            "description": "Firearm safe storage is a key suicide prevention strategy. Lethal means counseling resources for gun owners who give a damn.",
+            "url": "https://afsp.org/"
+          }
+        },
+
+        "cat_legal": {
+          "type": "category",
+          "settings": {
+            "heading": "Concealed Carry & Legal Resources",
+            "description": "Know your rights. Know your state's laws. Carry informed."
+          }
+        },
+        "res_uscca_map": {
+          "type": "resource",
+          "settings": {
+            "name": "USCCA Reciprocity Map",
+            "description": "Interactive map showing which states honor your concealed carry permit. Essential before you travel.",
+            "url": "https://www.usconcealedcarry.com/resources/ccw_reciprocity_map/"
+          }
+        },
+        "res_handgunlaw": {
+          "type": "resource",
+          "settings": {
+            "name": "Handgunlaw.us",
+            "description": "State-by-state gun law reference. Regularly updated, volunteer-run, absurdly thorough.",
+            "url": "https://www.handgunlaw.us/"
+          }
+        },
+        "res_usacarry": {
+          "type": "resource",
+          "settings": {
+            "name": "USA Carry",
+            "description": "Free reciprocity maps and state-by-state concealed carry law breakdowns. Forums and community.",
+            "url": "https://usacarry.com/"
+          }
+        },
+        "res_saf": {
+          "type": "resource",
+          "settings": {
+            "name": "Second Amendment Foundation",
+            "description": "Legal defense and litigation for gun owner rights. Behind landmark cases including D.C. v. Heller.",
+            "url": "https://www.saf.org/"
+          }
+        },
+        "res_fpc": {
+          "type": "resource",
+          "settings": {
+            "name": "Firearms Policy Coalition",
+            "description": "Aggressive legal challenges to unconstitutional gun laws. Very active in the courts and winning.",
+            "url": "https://www.firearmspolicy.org/"
+          }
+        },
+
+        "cat_prevention": {
+          "type": "category",
+          "settings": {
+            "heading": "Violence Prevention",
+            "description": "We love guns. We hate what happens when the wrong people get them."
+          }
+        },
+        "res_shp": {
+          "type": "resource",
+          "settings": {
+            "name": "Sandy Hook Promise",
+            "description": "Violence prevention programs in schools — Know the Signs, Say Something, Start With Hello. Founded by families of Sandy Hook.",
+            "url": "https://www.sandyhookpromise.org/"
+          }
+        },
+        "res_mfol": {
+          "type": "resource",
+          "settings": {
+            "name": "March For Our Lives",
+            "description": "Student-led movement for gun violence prevention. Organizing, registering voters, demanding action. Founded by Parkland survivors.",
+            "url": "https://marchforourlives.com/"
+          }
+        },
+        "res_everytown": {
+          "type": "resource",
+          "settings": {
+            "name": "Everytown for Gun Safety",
+            "description": "The largest gun violence prevention organization in the U.S. Nearly 10 million supporters.",
+            "url": "https://www.everytown.org/"
+          }
+        },
+        "res_trace": {
+          "type": "resource",
+          "settings": {
+            "name": "The Trace",
+            "description": "Independent nonprofit newsroom covering gun violence in America. Data-driven, agenda-free journalism.",
+            "url": "https://www.thetrace.org/"
+          }
+        },
+        "res_cvg": {
+          "type": "resource",
+          "settings": {
+            "name": "Cure Violence Global",
+            "description": "Treats gun violence as a public health epidemic. Evidence-based community intervention that actually works.",
+            "url": "https://cvg.org/"
+          }
+        },
+
+        "cat_advocacy": {
+          "type": "category",
+          "settings": {
+            "heading": "Responsible Gun Law Advocacy",
+            "description": "You can love the Second Amendment and still want background checks. These aren't contradictions."
+          }
+        },
+        "res_giffords": {
+          "type": "resource",
+          "settings": {
+            "name": "Giffords",
+            "description": "Founded by former Congresswoman Gabby Giffords. Research-based policy — background checks, red flag laws, community violence intervention.",
+            "url": "https://giffords.org/"
+          }
+        },
+        "res_brady": {
+          "type": "resource",
+          "settings": {
+            "name": "Brady United",
+            "description": "One of the OGs of gun violence prevention since 1974. Policy, litigation, and community programs. Pushing for comprehensive background checks.",
+            "url": "https://www.bradyunited.org/"
+          }
+        },
+        "res_jhu": {
+          "type": "resource",
+          "settings": {
+            "name": "Johns Hopkins Center for Gun Violence Solutions",
+            "description": "Evidence-based research and policy analysis from one of the world's top public health schools. The academic backbone of smart gun legislation.",
+            "url": "https://publichealth.jhu.edu/centers/center-for-gun-violence-solutions"
+          }
+        },
+        "res_rand": {
+          "type": "resource",
+          "settings": {
+            "name": "RAND Gun Policy in America",
+            "description": "Nonpartisan research on what gun policies actually work. No agenda — just evidence.",
+            "url": "https://www.rand.org/research/gun-policy.html"
+          }
+        }
+      },
+      "block_order": [
+        "cat_lgbtq",
+        "res_pink_pistols",
+        "res_blazing_sword",
+        "res_armed_equality",
+        "res_equality_in_arms",
+        "res_trigger_warning",
+        "cat_bipoc",
+        "res_naaga",
+        "res_bgm",
+        "res_hpn",
+        "res_lra",
+        "res_hara",
+        "cat_progressive",
+        "res_sra",
+        "res_lgc",
+        "res_abw2a",
+        "res_jbgc",
+        "res_la_progressive",
+        "cat_community",
+        "res_ayf",
+        "res_reddit_lgo",
+        "res_reddit_sra",
+        "res_reddit_2alib",
+        "cat_women",
+        "res_agag",
+        "res_awa",
+        "cat_training",
+        "res_uscca",
+        "res_pcs",
+        "res_besmart",
+        "res_goro",
+        "res_afsp",
+        "cat_legal",
+        "res_uscca_map",
+        "res_handgunlaw",
+        "res_usacarry",
+        "res_saf",
+        "res_fpc",
+        "cat_prevention",
+        "res_shp",
+        "res_mfol",
+        "res_everytown",
+        "res_trace",
+        "res_cvg",
+        "cat_advocacy",
+        "res_giffords",
+        "res_brady",
+        "res_jhu",
+        "res_rand"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

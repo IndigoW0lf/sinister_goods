@@ -1,0 +1,327 @@
+<div class="sg-resources color-{{ section.settings.color_scheme }}">
+  <!-- Hero -->
+  <div class="sg-resources__hero">
+    <div class="page-width">
+      <p class="sg-resources__eyebrow">{{ section.settings.eyebrow }}</p>
+      <h1 class="sg-resources__title">{{ section.settings.title }}</h1>
+      <p class="sg-resources__intro">{{ section.settings.intro }}</p>
+    </div>
+  </div>
+
+  <!-- Resource Categories -->
+  <div class="sg-resources__body page-width">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+
+        {%- when 'category' -%}
+          <div class="sg-resources__category" id="sg-cat-{{ forloop.index }}" {{ block.shopify_attributes }}>
+            <div class="sg-resources__category-header">
+              <h2 class="sg-resources__category-title">{{ block.settings.heading }}</h2>
+              <p class="sg-resources__category-desc">{{ block.settings.description }}</p>
+            </div>
+          </div>
+
+        {%- when 'resource' -%}
+          <a href="{{ block.settings.url }}" target="_blank" rel="noopener noreferrer" class="sg-resources__card" {{ block.shopify_attributes }}>
+            <div class="sg-resources__card-content">
+              <h3 class="sg-resources__card-name">{{ block.settings.name }}</h3>
+              <p class="sg-resources__card-desc">{{ block.settings.description }}</p>
+            </div>
+            <span class="sg-resources__card-arrow">&rarr;</span>
+          </a>
+
+      {%- endcase -%}
+    {%- endfor -%}
+
+    <!-- CTA -->
+    <div class="sg-resources__cta">
+      <p class="sg-resources__cta-text">{{ section.settings.cta_text }}</p>
+      {%- if section.settings.cta_button_label != blank -%}
+        <a href="{{ section.settings.cta_link }}" class="button button--primary">
+          {{ section.settings.cta_button_label }} &rarr;
+        </a>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+<style>
+  .sg-resources {
+    background-color: rgb(var(--color-background));
+    color: rgb(var(--color-foreground));
+  }
+
+  .sg-resources__hero {
+    padding: 6rem 2.4rem 4rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .sg-resources__eyebrow {
+    font-family: var(--font-body-family);
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: rgb(var(--color-coral));
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 2rem;
+  }
+
+  .sg-resources__title {
+    font-family: var(--font-heading-family);
+    font-size: 4.2rem;
+    line-height: 1.0;
+    text-transform: uppercase;
+    color: rgb(var(--color-ice-white));
+    margin-bottom: 2rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    .sg-resources__hero {
+      padding: 10rem 2.4rem 6rem;
+    }
+    .sg-resources__title {
+      font-size: 7.2rem;
+    }
+  }
+
+  .sg-resources__intro {
+    font-family: var(--font-body-family);
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 64rem;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 750px) {
+    .sg-resources__intro {
+      font-size: 1.8rem;
+    }
+  }
+
+  /* Body / Cards */
+  .sg-resources__body {
+    padding-top: 2rem;
+    padding-bottom: 8rem;
+  }
+
+  /* Category headers */
+  .sg-resources__category {
+    padding-top: 5.6rem;
+    margin-bottom: 2.4rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .sg-resources__category:first-child {
+    border-top: none;
+  }
+
+  .sg-resources__category-title {
+    font-family: var(--font-heading-family);
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    color: rgb(var(--color-ice-white));
+    margin-bottom: 0.8rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    .sg-resources__category-title {
+      font-size: 3.6rem;
+    }
+  }
+
+  .sg-resources__category-desc {
+    font-family: var(--font-body-family);
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.6;
+    max-width: 56rem;
+  }
+
+  /* Resource cards */
+  .sg-resources__card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.4rem;
+    padding: 2.4rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    text-decoration: none !important;
+    color: inherit;
+    transition: padding-left 0.2s ease;
+  }
+
+  .sg-resources__card:hover {
+    padding-left: 1.2rem;
+  }
+
+  .sg-resources__card:hover .sg-resources__card-name {
+    color: rgb(var(--color-coral));
+  }
+
+  .sg-resources__card:hover .sg-resources__card-arrow {
+    color: rgb(var(--color-coral));
+    transform: translateX(4px);
+  }
+
+  .sg-resources__card-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .sg-resources__card-name {
+    font-family: var(--font-body-family);
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: rgb(var(--color-ice-white));
+    margin-bottom: 0.4rem;
+    transition: color 0.2s ease;
+  }
+
+  .sg-resources__card-desc {
+    font-family: var(--font-body-family);
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.5;
+  }
+
+  .sg-resources__card-arrow {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.25);
+    flex-shrink: 0;
+    transition: color 0.2s ease, transform 0.2s ease;
+  }
+
+  /* Bottom CTA */
+  .sg-resources__cta {
+    margin-top: 6.4rem;
+    padding: 4.8rem;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+  }
+
+  .sg-resources__cta-text {
+    font-family: var(--font-body-family);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: rgb(var(--color-ice-white));
+    margin-bottom: 2rem;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Resources Page",
+  "class": "sg-resources-section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow text",
+      "default": "SINISTER STASH"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Page title",
+      "default": "Resources"
+    },
+    {
+      "type": "textarea",
+      "id": "intro",
+      "label": "Intro text",
+      "default": "The mark is personal. The movement is collective. These organizations are building the culture we believe in — inclusive, informed, and unafraid. Bookmark the ones that speak to you."
+    },
+    {
+      "type": "textarea",
+      "id": "cta_text",
+      "label": "Bottom CTA text",
+      "default": "Know an organization we should include? We're always listening."
+    },
+    {
+      "type": "text",
+      "id": "cta_button_label",
+      "label": "CTA button label",
+      "default": "GET IN TOUCH"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "CTA button link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Category Heading",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Category title",
+          "default": "Category Name"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Category description",
+          "default": "A short description of this category."
+        }
+      ]
+    },
+    {
+      "type": "resource",
+      "name": "Resource Link",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Organization name",
+          "default": "Organization Name"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "A short description of the organization."
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Link URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Resources Page",
+      "blocks": [
+        {
+          "type": "category",
+          "settings": {
+            "heading": "Inclusive Gun Clubs & Communities",
+            "description": "Spaces built for the rest of us."
+          }
+        },
+        {
+          "type": "resource",
+          "settings": {
+            "name": "Pink Pistols",
+            "description": "LGBTQ+ gun rights organization with 45+ chapters nationwide. \"Armed queers don't get bashed.\""
+          }
+        }
+      ]
+    }
+  ],
+  "max_blocks": 80
+}
+{% endschema %}
