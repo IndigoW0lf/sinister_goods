@@ -9,7 +9,8 @@
  */
 {
   "current": {
-    "logo_width": 90,
+    "logo": "shopify://shop_images/S_Bleed_Coral_Wordmark.svg",
+    "logo_width": 140,
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
@@ -197,12 +198,12 @@
       },
       "scheme-5": {
         "settings": {
-          "background": "#4AD4A8",
+          "background": "#4ad4a8",
           "background_gradient": "",
-          "text": "#141E24",
-          "button": "#141E24",
-          "button_label": "#4AD4A8",
-          "secondary_button_label": "#141E24",
+          "text": "#141e24",
+          "button": "#141e24",
+          "button_label": "#4ad4a8",
+          "secondary_button_label": "#141e24",
           "shadow": "#141e24"
         }
       }
